@@ -22,6 +22,7 @@ nmap -sC -sV <Target IP>
 The output revealed useful information about the services running on the target.
 
 ![We can see ftp, ssh and apache running](media/nmap.png)
+
 *We can see ftp, ssh and apache running*
 
 I decided to go the apache route and opened the target ip in my browser.
