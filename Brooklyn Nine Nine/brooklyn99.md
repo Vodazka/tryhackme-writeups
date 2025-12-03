@@ -29,17 +29,25 @@ I decided to go the apache route and opened the target ip in my browser.
 
 ![The page only displayed an immage with some text below it](media/webpage.png)
 
+*The page only displayed an immage with some text below it*
+
 Tried directory traversal without sucess, so I ran gobuster to enumerate directories and look for something useful.
 
 ![Which ended up not happening](media/gobuster.png)
 
+*Which ended up not happening*
+
 There had to be something on the webpage so I opened inspect mode and found a clue.
 
-![Inspect mode revealed a clue pointing toward seganography](media/steganography.png)
+![Inspect mode revealed a clue pointing toward steganography](media/steganography.png)
+
+*Inspect mode revealed a clue pointing toward steganography*
 
 There was only one image on the page so I got its name using inspect mode.
 
 ![The image was named brooklyn99.jpg](media/brooklyn.png)
+
+*The image was named brooklyn99.jpg*
 
 I downloaded the image localy using wget.
 
@@ -58,17 +66,25 @@ I tried a few common passwords and succeeded on my second attempt, which was sur
 
 ![This revealed valid credentials](media/holt.png)
 
+*This revealed valid credentials*
+
 Using those credentials, I logged in via SSH and obtained the user flag.
 
 ![An 'ls' of the home directory showed a file named nano.save, but it turned out to be irrelevant](media/sshuserflag.png)
+
+*An 'ls' of the home directory showed a file named nano.save, but it turned out to be irrelevant*
 
 With 'sudo -l', I was able to verify holt's permissions:
 
 ![Turns out we can run nano as root without a password](media/sudo-l.png)
 
+*Turns out we can run nano as root without a password*
+
 Since the user flag was at `/home/holt`, I decided to open `/root` directly with nano.
 
 ![And got the root flag](media/rootflag.png)
+
+*And got the root flag*
 
 At this point, the room was finished.
 Still, I wasn't satisfied.
@@ -102,7 +118,12 @@ The escalation path was clear.
 I opened the sudoers file using nano and modified it to grant myself full permissions.
 
 ![Replacing '/bin/nano' with 'ALL'](media/sudoers-edited.png)
+
+*Replacing '/bin/nano' with 'ALL'*
+
 ![Result in terminal](media/sudoers-terminal.png)
+
+*Result in terminal*
 
 With that change in place, I ran:
 
@@ -110,6 +131,8 @@ With that change in place, I ran:
 sudo su root
 ```
 ![This time I not only obtained the root flag, but full root access.](media/whoami-root.png)
+
+*This time I not only obtained the root flag, but full root access.*
 
 ---
 
@@ -121,18 +144,29 @@ stegcracker brooklyn99.jpg /usr/share/wordlists/rockyou.txt
 
 ![Stegcracker was not available on the THM machine, so I couldn’t brute force the password.](media/stegcracker.png)
 
+*Stegcracker was not available on the THM machine, so I couldn’t brute force the password.*
+
 ---
 
 ## Method 2
 
 ![Nmap showing port 21 with FTP open](media/nmap.png)
 
+*Nmap showing port 21 with FTP open*
+
 ![I logged anonymously, without a password.](media/ftp-anon-login.png)
+
+*I logged anonymously, without a password.*
 
 After listing the contents of the server, I found a note left by Amy. 
 
 ![FTP file transfer.](media/ftp-file-transfer.png)
+
+*FTP file transfer.*
+
 ![Amy's note.](media/amynote.png)
+
+*Amy's note.*
 
 The note suggested Jake’s password was weak.  
 I used Hydra with the 'rockyou.txt' wordlist to brute force his SSH login:
@@ -143,14 +177,22 @@ hydra -l jake -P /usr/share/wordlists/rockyou.txt ssh://<Target IP>
 
 ![There it is.](media/hydra-jake.png)
 
+*There it is.*
+
 I was then able to log in as jake and list his permissions.
 
 ![Jake can run the 'less' command with 'sudo'](media/jake-login-sudo-l.png)
+
+*Jake can run the 'less' command with 'sudo'*
 
 According to [GTFOBins](https://gtfobins.github.io/gtfobins/less/),this can be abused to escalate privileges.
 
 ![As we can see here](media/gtfobins-less.png)
 
+*As we can see here*
+
 And just like that.
 
 ![I got root](media/jake-privesc.png)
+
+*I got root*
