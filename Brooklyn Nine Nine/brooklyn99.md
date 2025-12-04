@@ -153,10 +153,6 @@ The *brooklyn99.png* password can be obtained with:
 stegcracker brooklyn99.jpg /usr/share/wordlists/rockyou.txt
 ```
 
-![](media/stegcracker.png)
-
-Stegcracker was not available on the THM machine, so I didn’t brute force the password like I had done on my home lab.
-
 ---
 
 ## Method 2
