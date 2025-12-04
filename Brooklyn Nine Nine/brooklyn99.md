@@ -32,7 +32,7 @@ I decided to go the HTTP service route and opened the Target IP in my browser.
 
 The page only displayed an image with some text below it.
 
-Decided to use gobuster and look for a directory traversal path with the command:
+Suspecting there might be hidden content, I launched Gobuster to brute‑force directories:
 
 ```bash
 gobuster dir -u http://<Target IP> -w /usr/share/wordlists/dirb/common.txt
