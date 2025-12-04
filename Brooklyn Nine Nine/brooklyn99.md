@@ -120,9 +120,10 @@ Documenting both approaches highlights the difference between â€œgetting luckyâ€
 
 ## Method 1 - Privilege Escalation (Correct Path)
 
-I replicated the scenario in a home lab to understand how limited `/bin/nano` privileges could be abused after struggling with escalation.
+I replicated the scenario in a home lab to understand how limited `/bin/nano` privileges could be abused.
 
 It was during this process that I realized the 'sudoers' file had been available all along. 
+
 The escalation path was clear.
 
 I opened the sudoers file using nano and modified it to grant myself full permissions.
