@@ -18,11 +18,11 @@ This brought up a simple login page.
 
 ![](media/login.png)
 
-With little information available on the website I opened the browser's inspect mode and got a clue.
+As the website instructed, I opened the browser's inspect mode and got a clue.
 
 ![](media/guest-creds.png)
 
-Guest credentials to access the page hidden in a HTML comment.
+Guest credentials to access the page in a HTML comment.
 
 Using them, I managed to log in as a guest.
 
@@ -49,4 +49,5 @@ The exercise reinforces the importance of:
 - Validating and sanitizing user input.
 
 - Enforcing proper access control.
+
 
