@@ -13,6 +13,7 @@ The room can be completed in two different ways, offering multiple paths to owne
 
 ## Method 1
 I began with enumeration to understand the target environment and gather clues for my next steps.
+
 For this, I ran the following command:
 
 ```bash
