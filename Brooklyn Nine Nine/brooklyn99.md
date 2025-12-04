@@ -97,7 +97,9 @@ Since the user flag was at `/home/holt`, I decided to open `/root` directly with
 And got the root flag.
 
 At this point, the room was finished.
+
 Still, I wasn't satisfied.
+
 I had to go back.
 
 ---
