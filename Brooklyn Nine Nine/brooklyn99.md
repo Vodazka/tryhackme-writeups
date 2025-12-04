@@ -6,7 +6,7 @@ The objective is to gain root access to the target machine by capturing two flag
 The room can be completed in two different ways, offering multiple paths to ownership.
 
 ## Setup
-- Tools used: nmap, gobuster, wget, steghide, stegcrack, hydra, GTFOBins.
+- Tools used: nmap, gobuster, wget, steghide, stegcrack, hydra.
 - Notes: My initial focus was simply to gain access. Afterwards, I retraced my steps to follow the intended path “correctly,” and later explored the alternative method to achieve root access.
 
 ---
