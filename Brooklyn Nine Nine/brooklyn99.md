@@ -67,7 +67,8 @@ steghide extract -sf brooklyn99.jpg
 ```
 
 I was prompted for a password, which confirmed I was on the right track.
-I tried a few common passwords and succeeded on my second attempt - The password was weak and easily guessed.
+
+Tried a few common passwords and succeeded on my second attempt - The password was weak and easily guessed.
 
 ![](media/holt.png)
 
