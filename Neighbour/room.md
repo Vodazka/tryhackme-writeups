@@ -14,23 +14,23 @@ The objective of this room is to exploit a web vulnerability to gain access to t
 
 I began by entering the Target IP into my web browser as instructed.
 
-![](media/login)
+![](media/login.png)
 
 This brought up a simple login page.
 
 With little information available on the website I opened the browser's inspect mode and got a clue.
 
-![](media/guest-creds)
+![](media/guest-creds.png)
 
 Guest credentials to access the page hidden in a HTML comment.
 
 Using them, I managed to log in as a guest.
 
-![](media/guest-page)
+![](media/guest-page.png)
 
 I quickly noticed the url parameter `user=guest` and altered it to `user=admin`.
 
-![](media/root-flag)
+![](media/root-flag.png)
 
 And got the flag.
 
@@ -47,4 +47,5 @@ The exercise reinforces the importance of:
 
 - Maintaining clean source code.
 - Validating and sanitizing user input.
+
 - Enforcing proper access control.
