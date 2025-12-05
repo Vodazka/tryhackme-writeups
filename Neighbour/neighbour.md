@@ -22,6 +22,8 @@ As the website instructed, I opened the browser's inspect mode and got a clue.
 
 Guest credentials were exposed in an HTML comment.
 
+The comment also reveals the existence of an account with the name "admin."
+
 ![](media/guest-creds.png)
 
 Using them, I looged in as guest.
@@ -49,7 +51,3 @@ The exercise reinforces the importance of:
 - Validating and sanitizing user input.
 
 - Enforcing proper access control.
-
-
-
-
