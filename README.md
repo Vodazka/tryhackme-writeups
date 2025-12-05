@@ -1,6 +1,6 @@
 # TryHackMe Writeups
 
-This repository contains the work I have personally completed on TryHackMe](https://tryhackme.com).  
+This repository contains the work I have personally completed on [TryHackMe](https://tryhackme.com).  
 Feel free to read and browse, but I encourage you to attempt the rooms yourself first.  
 Flags are hidden so you’ll need to solve the challenges on your own.
 
