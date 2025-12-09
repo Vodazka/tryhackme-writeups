@@ -12,6 +12,7 @@ Rooms are listed below by difficulty and then alphabetically within each categor
 
 ### Easy
 - [Brooklyn Nine Nine](https://github.com/Vodazka/tryhackme-writeups/blob/main/Brooklyn%20Nine%20Nine/brooklyn99.md)
+- [CyberHeroes](https://github.com/Vodazka/tryhackme-writeups/blob/main/CyberHeroes/CyberHeroes.md)
 - [Neighbour](https://github.com/Vodazka/tryhackme-writeups/blob/main/Neighbour/neighbour.md)
 
 ### Medium
