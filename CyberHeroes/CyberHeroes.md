@@ -14,27 +14,27 @@ The objective is to log in to the CyberHeroes website.
 
 I started by inserting the target IP address into my browser as instructed.
 
-[](media/website.png)
+![](media/website.png)
 
 Navigating the website I found the login page.
 
-[](media/login.png)
+![](media/login.png)
 
 I decided to run a gobuster scan to look for hidden directories and discovered `/assets`.
 
-[](media/gobuster.png)
+![](media/gobuster.png)
 
 Inside `/assets` there were other directories, but none contained useful content.
 
-[](media/assets.png)
+![](media/assets.png)
 
 At this point, I decided to inspect the source code of the login page and found hardcoded credentials.
 
-[](media/source-code.png)
+![](media/source-code.png)
 
 Entering these credentials into the login form yielded the flag.
 
-[](media/flag.png)
+![](media/flag.png)
 
 ---
 
@@ -44,3 +44,4 @@ Entering these credentials into the login form yielded the flag.
 
 - Hardcoded credentials in source code.
 - Exposed directories.
+
