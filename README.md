@@ -11,6 +11,7 @@ Flags are hidden so you’ll need to solve the challenges on your own.
 Rooms are listed below by difficulty and then alphabetically within each category.
 
 ### Easy
+- [Archangel](https://github.com/Vodazka/tryhackme-writeups/blob/main/Archangel/Archangel.md)
 - [Brooklyn Nine Nine](https://github.com/Vodazka/tryhackme-writeups/blob/main/Brooklyn%20Nine%20Nine/brooklyn99.md)
 - [CyberHeroes](https://github.com/Vodazka/tryhackme-writeups/blob/main/CyberHeroes/CyberHeroes.md)
 - [Neighbour](https://github.com/Vodazka/tryhackme-writeups/blob/main/Neighbour/neighbour.md)
