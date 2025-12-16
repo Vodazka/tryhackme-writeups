@@ -24,7 +24,7 @@ Although most of the content appeared as gibberish, a few readable strings were 
 
 ![compiled gibberish](media/2.png)
 
-Using the `strings` command to filter out the gibberish, it’s possible to get a cleaner view of the readable text inside the binary.
+Using the `strings` command to filter out the gibberish, it’s possible to get a cleaner view.
 
 ![strings command immage](media/3.png)
 
@@ -38,12 +38,13 @@ From the output, several interesting clues appear:
 
 `strcmp` is a C function that suggests the program compares user input against a hardcoded password.
 
-`DoYouEven%sCTF`  looks like a variable or placeholder, but testing it directly as the password fails.
+`DoYouEven%sCTF`  looks like a variable or placeholder, and testing it directly as the password fails.
 
 At this stage, `strings` gives us useful hints about the program’s behavior, but not the actual password, so my next step was to decompile the binary with Ghidra to confirm the logic and extract the hardcoded value.
 
 ![ghidra source code](media/4.png)
 
 From analyzing this code, it becomes clear how the program validates input and which value ultimately serves as the flag.
+
 
 ---
