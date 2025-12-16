@@ -13,6 +13,7 @@ Rooms are listed below by difficulty and then alphabetically within each categor
 ### Easy
 - [Archangel](https://github.com/Vodazka/tryhackme-writeups/blob/main/Archangel/Archangel.md)
 - [Brooklyn Nine Nine](https://github.com/Vodazka/tryhackme-writeups/blob/main/Brooklyn%20Nine%20Nine/brooklyn99.md)
+- [Compiled](https://github.com/Vodazka/tryhackme-writeups/blob/main/Compiled/Compiled.md)
 - [CyberHeroes](https://github.com/Vodazka/tryhackme-writeups/blob/main/CyberHeroes/CyberHeroes.md)
 - [Neighbour](https://github.com/Vodazka/tryhackme-writeups/blob/main/Neighbour/neighbour.md)
 
@@ -25,4 +26,10 @@ Rooms are listed below by difficulty and then alphabetically within each categor
 ### Insane
 - 🚧🚧🚧 Under Construction 🚧🚧🚧
 
-  ---
+---
+  
+#### Disclaimer
+These write‑ups follow a general blueprint, but the structure evolves as I improve my workflow.  
+Because of that, some older notes will look different.  I don’t go back and re‑edit every document whenever I change the format.
+
+---
