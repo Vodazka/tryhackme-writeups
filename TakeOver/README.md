@@ -30,13 +30,13 @@ This brought me to the homepage.
 
 ![target website homepage](media/03.png)
 
-I ended up not finding anything by searching additional pages on the website and inspecting the source code, so I moved on to scanning the target with nmap.
+I ended up not finding anything by navigating through the website or inspecting the source code, so I moved on to scanning the target with nmap.
 
 ```bash
 nmap futurevera.thm
 ```
 
-Which ended up revealing three ports open: tcp 22 (`ssh`), tcp 80 (`http`), and tcp 443 (`https`).
+Which revealed three open TCP ports: 22 (`ssh`), 80 (`http`), and 443 (`https`).
 
 ![nmap of target website](media/04.png)
 
@@ -51,8 +51,8 @@ gobuster dir -u https://futurevera.thm -k -w /usr/share/wordlists/dirb/common.tx
 The scan revealed `/index.html`, which simply redirected back to the homepage, along with three additional directories: `/assets`, `/css`, and `/js`, all of which contained only the site’s static code and assets.
 
 ![index of assets](media/06.png)    
-![index of js](media/07.png)    
-![index of css](media/08.png)
+![index of js](media/08.png)    
+![index of css](media/07.png)
 
 Next, I moved on to virtual host enumeration using Gobuster:
 
@@ -70,7 +70,7 @@ I added both entries to my `/etc/hosts` file so they would resolve locally.
 
 Accessing these subdomains triggered the usual certificate warning. 
 
-While checking one of them, the certificate exposed another hostname.
+While checking one of them, I found out another exposed hostname.
 
 ![found another subdomain via cert](media/11.png)
 
@@ -81,5 +81,6 @@ I added this newly discovered domain to the hosts file as well.
 Visiting this final subdomain revealed the flag.
 
 ![flag](media/13.png)
+
 
 ---
