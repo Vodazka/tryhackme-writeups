@@ -11,11 +11,12 @@ Flags are hidden so you’ll need to solve the challenges on your own.
 Rooms are listed below by difficulty and then alphabetically within each category.
 
 ### Easy
-- [Archangel](https://github.com/Vodazka/tryhackme-writeups/blob/main/Archangel/Archangel.md)
-- [Brooklyn Nine Nine](https://github.com/Vodazka/tryhackme-writeups/blob/main/Brooklyn%20Nine%20Nine/brooklyn99.md)
-- [Compiled](https://github.com/Vodazka/tryhackme-writeups/blob/main/Compiled/Compiled.md)
-- [CyberHeroes](https://github.com/Vodazka/tryhackme-writeups/blob/main/CyberHeroes/CyberHeroes.md)
-- [Neighbour](https://github.com/Vodazka/tryhackme-writeups/blob/main/Neighbour/neighbour.md)
+- [Archangel](https://github.com/Vodazka/tryhackme-writeups/blob/main/Archangel/Archangel.md) -&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;>> `boot2root`, `web exploitation`
+- [Brooklyn Nine Nine](https://github.com/Vodazka/tryhackme-writeups/blob/main/Brooklyn%20Nine%20Nine/brooklyn99.md) -&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;>> `boot2root`, `steganography`
+- [Compiled](https://github.com/Vodazka/tryhackme-writeups/blob/main/Compiled/Compiled.md) -&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;>> `reverse engeneering`
+- [CyberHeroes](https://github.com/Vodazka/tryhackme-writeups/blob/main/CyberHeroes/CyberHeroes.md) -&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;>> `login bypass`
+- [Neighbour](https://github.com/Vodazka/tryhackme-writeups/blob/main/Neighbour/neighbour.md) -&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;->> `web`
+- [TakeOver](https://github.com/Vodazka/tryhackme-writeups/tree/main/TakeOver) -&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;->> `subdomain enumeration`, `web`
 
 ### Medium
 - Leveling up soon
